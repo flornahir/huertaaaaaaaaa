@@ -237,26 +237,13 @@ img {
   display: block;
 }
 
-.fondoVerde {
-  background-color: rgba(157, 193, 62, 0.7);
-  padding: 10px;
-}
-
-.fondoVerde h2,
-.fondoVerde h3,
-.fondoVerde h4 {
-  color: #653B17;
-}
-
-.fondoRojo {
-  background-color: rgba(255, 99, 71, 0.7);
-  padding: 10px;
-}
-
-.fondoRojo h2,
-.fondoRojo h3,
-.fondoRojo h4 {
-  color: #653B17;
+#huertaEnCasa,
+#planificacion,
+#herramientas,
+#suelo,
+#siambra {
+  margin: 0 0 40px;
+  position: relative;
 }
 
 .contenedorTexto {
@@ -285,7 +272,7 @@ img {
 
 .contenedorTexto .textoImg {
   position: relative;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .contenedorTexto .textoImg:after {
@@ -297,6 +284,28 @@ img {
   left: calc(1.5% - 2px);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border: solid 2px #FCF9D6;
+}
+
+.fondoVerde {
+  background-color: rgba(157, 193, 62, 0.7);
+  padding: 10px;
+}
+
+.fondoVerde h2,
+.fondoVerde h3,
+.fondoVerde h4 {
+  color: #653B17;
+}
+
+.fondoRojo {
+  background-color: rgba(255, 99, 71, 0.7);
+  padding: 10px;
+}
+
+.fondoRojo h2,
+.fondoRojo h3,
+.fondoRojo h4 {
+  color: #653B17;
 }
 
 .fondoNaranja {
@@ -331,15 +340,6 @@ img {
   font-size: 1.7em;
   color: #FCF9D6;
   text-shadow: 1px 1px 20px #9DC13E, 3px 3px 5px #653B17;
-}
-
-#huertaEnCasa,
-#planificacion,
-#herramientas,
-#suelo,
-#siambra {
-  margin: 0 0 40px;
-  position: relative;
 }
 
 .fila {
@@ -794,10 +794,24 @@ img {
   color: #F7B22E;
 }
 
+/*--------------------Cuidados---------------------*/
+#cuidados .subtitulo {
+  background-image: url("../imagenes/subtitulos/subtitulocuidados.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#cuidados span p {
+  color: #F7B22E;
+}
+
+#cuidados .naranja {
+  color: #F7B22E;
+}
+
 /*--------------------Epilogo---------------------*/
 #epilogo {
   width: 90%;
-  height: 95vh;
   margin: 10px auto 20px;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border: solid 2px #9DC13E;
@@ -810,6 +824,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
 }
 
 #epilogo h3 {
@@ -822,6 +837,12 @@ img {
 
 #epilogo .naranja a {
   color: #F7B22E;
+}
+
+#epilogo .img {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
 }
 
 /*-----------------------------------------------------------------------
