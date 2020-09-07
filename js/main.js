@@ -6,8 +6,9 @@ let item = document.querySelectorAll('.item');
 let barra = document.getElementById("barra");
 let btnArriba = document.querySelector('.btnUp');
 let portadaY = document.getElementById('portada').offsetHeight;
+let acordionBtn = document.querySelectorAll('.acordionBtn');
 
-
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 btn.addEventListener('click', function(e) {
     if (e.target.classList.contains('abrirBtn')) {
@@ -50,3 +51,24 @@ window.addEventListener('scroll', function(e) {
     barra.style.width = scrolled + "%";
 
 });
+
+
+
+acordionBtn.forEach((btn) => btn.addEventListener('click',
+    function() {
+        let panel = btn.nextElementSibling;
+        let icono = btn.children[1];
+        if (btn.classList.contains('cerrado')) {
+            panel.style.display = 'block';
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            icono.style.animation = 'up .6s forwards';
+            btn.classList.remove('cerrado');
+        } else {
+            icono.style.animation = 'down .6s  forwards';
+            btn.classList.add('cerrado');
+            panel.style.display = 'none';
+            panel.style.maxHeight = null;
+        }
+
+    }
+))
