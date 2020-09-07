@@ -10,7 +10,7 @@
   right: 0px;
   border: 3px solid #9DC13E;
   background-color: #FCF9D6;
-  z-index: 5;
+  z-index: 11;
   cursor: pointer;
 }
 
@@ -48,7 +48,7 @@
   position: fixed;
   top: 0;
   left: 100%;
-  z-index: 4;
+  z-index: 10;
   display: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +71,7 @@
   left: 0%;
   -webkit-transition: all .5s;
   transition: all .5s;
-  z-index: 4;
+  z-index: 6;
 }
 
 .menu .items nav {
@@ -206,6 +206,16 @@ html {
 
 body {
   background-color: #FCF9D6;
+}
+
+.aa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 p,
@@ -466,7 +476,7 @@ img {
   right: 3px;
   border: 3px solid #9DC13E;
   background-color: #FCF9D6;
-  z-index: 3;
+  z-index: 9;
   cursor: pointer;
   display: none;
   -webkit-box-pack: center;
@@ -587,6 +597,132 @@ img {
   opacity: 1;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+.contenedorAcordion {
+  margin: 20px auto;
+}
+
+.contenedorAcordion .contenedorPanel {
+  margin: 10px 0;
+}
+
+.contenedorAcordion .acordionBtn {
+  width: 100%;
+  background-color: #F7B22E;
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.contenedorAcordion .acordionBtn .verdura {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorAcordion .acordionBtn .verdura h3 {
+  color: #653B17;
+}
+
+.contenedorAcordion .acordionBtn .verdura img {
+  max-width: 50px;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.contenedorAcordion .acordionBtn i {
+  color: #653B17;
+  font-size: 1.3em;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.contenedorAcordion .panel {
+  background-color: rgba(157, 193, 62, 0.6);
+  padding: 20px;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.contenedorAcordion .panel .meses .mes {
+  background-color: #F7B22E;
+  display: inline-block;
+  margin: 0 10px 10px;
+}
+
+.contenedorAcordion .panel .meses .mes p {
+  text-align: center;
+  padding: 10px;
+}
+
+.contenedorAcordion .panel i {
+  margin: 0 10px 0 0;
+  font-size: 1.2em;
+  color: #9DC13E;
+}
+
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes down {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 /*--------------------Presentacion---------------------*/
@@ -809,6 +945,18 @@ img {
   color: #F7B22E;
 }
 
+/*--------------------Verduras---------------------*/
+#verduras {
+  position: relative;
+  z-index: 5;
+}
+
+#verduras .subtitulo {
+  background-image: url("../imagenes/subtitulos/subtitulocuidados.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /*--------------------Epilogo---------------------*/
 #epilogo {
   width: 90%;
@@ -824,11 +972,16 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
 }
 
 #epilogo h3 {
   text-align: center;
+}
+
+#epilogo .img {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
 }
 
 #epilogo .naranja h3 {
@@ -836,13 +989,9 @@ img {
 }
 
 #epilogo .naranja a {
+  position: relative;
   color: #F7B22E;
-}
-
-#epilogo .img {
-  width: 100%;
-  margin: 10px auto;
-  padding: 5px;
+  z-index: 4;
 }
 
 /*-----------------------------------------------------------------------
@@ -991,4 +1140,3 @@ img {
     height: 30vh;
   }
 }
-/*# sourceMappingURL=main.css.map */
